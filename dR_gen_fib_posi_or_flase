@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+void fib_pos(int num){
+int a=0,b=1,c,count=2;
+
+if(num==0){
+    printf("1");
+    return;
+}
+    if(num==1){
+    printf("2");
+    return;
+
+    }
+    while(c<num){
+        c=a+b;
+        a=b;
+        b=c;
+        count ++;
+    }
+        if(c == num){
+            printf("%d",count);
+
+        }
+        else{
+
+            printf("flase");
+
+
+    }
+}
+
+
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    fib_pos(num);
+  //  printf("Hello world!\n");
+    return 0;
+}
