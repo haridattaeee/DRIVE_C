@@ -1,30 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
+void gen_fib_compvalue(int num){   //5
+int a=0,b=1,c;
 
-void gen_fib(int num){
-int a=0,b=1,c,i;
+       //5
 if(num==0){
+            printf("True");
+            return ;
+
+}
+if(num == 1)
+{
+    printf("True");
+return;
+}
+while(c<=num){
+
+c=a+b;  //
+a=b;
+b=c;
+
+
+
+if(c== num){
+    printf("True");
+return;
+}
+
+
+    }
+
+printf("Flase");
     return;
+
 }
-if(num==1){
-    printf("%d ",a);
-    return ;
-    }
-    printf("%d %d ",a,b);
-    for(i=3;i<=num;i++){
-       c=a+b;
-       a=b;
-       b=c;
-       printf("%d ",c);
 
 
-    }
-}
-int main(){
+
+int main()
+{
     int num;
     scanf("%d",&num);
-    gen_fib(num);
-
- return 0;
-
+    gen_fib_compvalue(num);
+   // printf("Hello world!\n");
+    return 0;
 }
