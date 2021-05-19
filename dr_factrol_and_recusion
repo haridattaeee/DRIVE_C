@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int fac(int num){
+int i=1,res=1;
+if(num==0){
+    return 1;
+
+}
+
+
+return num*fac(num-1);
+
+/*for(i=1;i<=num;i++){ //5
+    res=i*res;   //1
+}
+return res
+*/
+}
+
+int main()
+{
+    int num,a;
+    scanf("%d",&num);
+    a=fac(num);
+    printf("%d",a);
+
+
+    //printf("Hello world!\n");
+    return 0;
+}
+
+
+//for use the forloop only factrol
+//rescusion
