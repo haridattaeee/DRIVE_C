@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+int ressiana(int a,int b){
+    int res=0;
+while(a){
+    if(a%2==1){
+        res=res+b;
+
+    }
+    a=a/2;
+    b=b*2;
+}
+return res;
+}
+int main()
+{
+    int a,b,res=0;
+    scanf("%d%d",&a,&b);
+    res=ressiana(a,b);
+    printf("%d",res);
+//printf("Hello world!\n");
+    return 0;
+}
