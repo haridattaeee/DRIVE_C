@@ -1,0 +1,75 @@
+#include <stdio.h>
+#include <stdlib.h>
+//#include<math.h>
+
+int dis(int num)
+{
+    int r,h,i,count=0,k,p,sum=0,number;
+    h=num;
+    i=num;
+    number = num;
+    while(num)
+    {
+        r=num%10;
+        num=num/10;
+        count++;
+      //  printf("\n%d\n",count);
+        }
+      //  printf("%d",count);
+        count = count +1;
+      //  printf("\n%d\n",count);
+   // printf("%d",count);
+   while(i)
+   {
+       k=i%10;
+       i=i/10;
+       count =count -1;
+      // printf("\n%d\n",count);
+
+       p=pow(k,count);
+    //  printf("\n%d\n",p);
+
+     // printf("%d",p);
+
+       sum =p+sum;
+
+ //printf("\n%d\n",sum);
+   }
+    printf("\n%d\n",sum);
+   if(number == sum)
+   {
+       return 1;
+   }
+   else
+   {
+       return 0;
+   }
+
+ // printf("%d",sum);
+}
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    if(dis(num))
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("Flase");
+    }
+
+
+
+    return 0;
+}
+
+
+
+/*
+175 ==((1^1)+(7^2)+(5^5)==175 --true
+125 ==((1^1)+(2^2)+(5^5))  ==125 --flase
+
+
+*/
