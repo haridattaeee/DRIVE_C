@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+int bitwiseComplement(int n){
+int l=1,r,k=0,i=0,p=0;
+ if(n==0)
+ {
+     return l;
+ }
+    while(n)  //5
+    {
+        r=n%2;  // 101
+    n=n/2;
+        if(r==1)   //010
+        {
+            r=0;
+        }
+    else
+    {
+        r=1;
+    }
+    k=pow(2,i)*r;   // 0 2 0
+        
+      p=k+p;         //0 2
+        i++;
+    printf("%d",p);
+    }
+    printf("\n%d",p);
+    return p;
+    
+}
+int main()
+{
+int n,num;
+scanf("%d",&n);
+num=bitwiseComplement( n);
+printf("%d",num);
+}
+
+
+//5-->101---->010--->2 print 2
+//1 -->1--0---->0prin 0
