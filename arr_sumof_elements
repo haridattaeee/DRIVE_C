@@ -1,0 +1,31 @@
+#include<stdio.h>
+int findsumarray(int *arr,int size)  // 1 2 3 4 5  5
+{
+	int sumarray=arr[0],i;  //
+	for(i=1;i<size;i++)
+	{
+		sumarray+=arr[i];
+	}
+	return sumarray;
+}
+int main()
+{
+	int sumarray,arr[100],i,size;
+	scanf("%d",&size); //5
+	for(i=0;i<size;i++)  //1 2 3 4 5
+	{
+		scanf("%d",&arr[i]);
+	}
+	sumarray=findsumarray(arr,size); // 1 2 3 4 5    5
+	printf("%d",sumarray);
+}
+
+
+/*
+Sample Input:
+5
+1 2 3 4 5
+Sample Output:
+15
+
+*/
