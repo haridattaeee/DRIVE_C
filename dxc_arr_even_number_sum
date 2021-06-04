@@ -1,0 +1,36 @@
+#include<stdio.h>
+int findsumeven(int *arr,int size)  // 1 2 3 4 5  5
+{
+	int sum=0,i;
+	for(i=0;i<size;i++) // 1
+	{
+		if(arr[i]%2 == 0)
+		{
+			sum+=arr[i];
+		}
+
+	}
+	return sum;
+}
+int main()
+{
+	int sumeven,arr[100],i,size;
+	scanf("%d",&size);  //5
+	for(i=0;i<size;i++)
+	{
+		scanf("%d",&arr[i]);  // 1 2 3 4 5
+	}
+	sumeven=findsumeven(arr,size);
+	printf("%d",sumeven);
+}
+
+/*
+
+5
+1 2 3 4 5
+Sample Output:
+6
+
+
+
+*/
