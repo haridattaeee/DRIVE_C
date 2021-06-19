@@ -1,0 +1,50 @@
+
+String inputs;
+int Switch1=5;   //pin no-5
+int Switch2=7;  //pin no-7
+
+
+
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+pinMode(Switch1, OUTPUT); 
+pinMode(Switch2, OUTPUT); 
+digitalWrite(Switch1, HIGH);
+digitalWrite(Switch2, HIGH);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+while(Serial.available()) 
+{ 
+char c = Serial.read();
+if (c == '#')
+{
+break; 
+}
+inputs += c; 
+}
+if (inputs.length() >0)
+{
+Serial.println(inputs);
+
+if(inputs == "C")                        //C---ON
+{ 
+digitalWrite(Switch1, HIGH);
+}
+else if(inputs == "c")                //c--off
+{
+digitalWrite(Switch1, LOW);
+}
+else if(inputs == "D")                  //D--off
+{
+digitalWrite(Switch2, HIGH);
+}
+else if(inputs == "d")
+{
+digitalWrite(Switch2, LOW);               //d--on
+}
+}
+inputs="";
+}
