@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int linearsearch(int *arr,int size,int key)
+{
+   int i;
+   for(i=0;i<size;i++)
+   {
+       if (key==arr[i])
+       {
+//printf("\nThe index value is %d",i);
+           return i;
+       }
+        //printf("The index value is -10");
+   }
+
+  return -1;
+
+}
+int main()
+{
+    int size,key,i;
+    scanf("%d",&size);
+    scanf("%d",&key);
+    int arr[size],c;
+
+    for(i=0;i<size;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+
+
+    for(i=0;i<size;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+  c= linearsearch(arr,size,key);
+   printf("The index value is %d",c   );
+
+   // printf("Hello world!\n");
+    return 0;
+}
