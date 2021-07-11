@@ -1,0 +1,24 @@
+
+#include<stdio.h>
+
+int fact(int num) //100
+{
+    int i,count=0;
+    for(i=1;i<=num;i++)//1 2 4 5 10 20 25 50 100
+            {
+        if (num%i==0)
+        {
+            count ++;
+        }
+    }
+    return count ;
+}
+
+
+int main ()
+{
+    int num,c;
+    scanf("%d",&num);
+    c= fact(num);
+    printf("%d",c);
+}
