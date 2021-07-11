@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,num,result=0;d  // num 5
+    scanf("%d",&num);
+    for(i=1;i<=num;i++)  
+    {
+
+    result = result + i;  // 1 + 2 + 3 + 4 + 5 ======= 15
+    }
+    printf("%d",result);
+    return 0;
+}
