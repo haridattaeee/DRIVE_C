@@ -1,0 +1,44 @@
+#include<stdio.h>
+int findMin(int *arr,int size)
+{
+	int i,min=arr[0];
+	for(i=0;i<size;i++)
+	{
+		if(min>arr[i])
+		{
+			min=arr[i];
+		}
+	}
+	return min;
+}
+
+int Min(int *arr,int *brr,int size)
+{
+	//write your code here
+int	a= findMin(arr,size);
+int	b= findMin(brr, size);
+
+	if (a<b)
+    {
+        return a;
+    }
+    else
+    {
+        return b;
+    }
+}
+int main()
+{
+	int min,arr[100],i,size,brr[100];
+	scanf("%d",&size);
+	for(i=0;i<size;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	for(i=0;i<size;i++)
+	{
+		scanf("%d",&brr[i]);
+	}
+	min=Min(arr,brr,size);
+	printf("%d",min);
+}
