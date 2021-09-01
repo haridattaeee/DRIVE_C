@@ -1,0 +1,14 @@
+
+#include <stdio.h>
+
+int main()
+{
+int a,b,power=1,i;
+scanf("%d%d",&a,&b);
+for(i=1;i<=b;i++)
+{
+    power=power*a;
+}
+printf("%d",power);
+    return 0;
+}
