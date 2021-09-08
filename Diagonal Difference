@@ -1,0 +1,65 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int ro,cl,i,j,res=0,rs=0,ls=0;
+    scanf("%d%d",&ro,&cl);
+    int arr[ro][cl];
+    
+    for(i=0;i<ro;i++)
+    {
+        for(j=0;j<cl;j++)
+        {
+            scanf("%d  ",&arr[i][j]);
+        }
+    }
+    for(i=0;i<ro;i++)
+    {
+        for(j=0;j<cl;j++)
+        {
+            printf("%d  ",arr[i][j]);
+        }
+        printf("\n");
+    }
+    
+   
+   
+   
+    for(i=0;i<ro;i++)
+    {
+        for(j=0;j<cl;j++)
+        {
+            if (i==j)
+            {
+                rs=rs+arr[i][j];
+            }
+        }
+       
+    }
+    cl=cl-1;
+     for(i=0;i<ro;i++)
+    {
+        for(j=0;j<=cl;j++)
+        {
+            
+            if (j==cl)
+            {
+                //j=cl;
+                ls=ls+arr[i][j];
+                //printf("%d ",ls);
+            }
+        }
+        cl--;
+       
+    }
+   
+   res=rs-ls;
+   res=abs(res);
+   printf("%d",res);
+   
+   // printf("%d  \n",rs);
+   // printf("%d",ls);
+   return 0;
+    
+}
