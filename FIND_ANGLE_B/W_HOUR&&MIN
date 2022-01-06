@@ -1,0 +1,50 @@
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    char time[10];
+    scanf("%s",time);
+    int a,b,c,d,sum=0;
+    a=time[0]-'0';
+    b=time[1]-'0';
+    c=time[3]-'0';
+    d=time[4]-'0';
+    
+    if (a==0)
+    {
+      sum=(b*30)-(5.5*(c*10+d));
+    sum=abs(sum);
+    sum=360-sum;
+  
+    }
+    
+    if (a==1 && b==0)
+    {
+      sum=((a*10+b)*30)-(5.5*((c*10)+d));
+    sum=abs(sum);
+    sum=360-sum;  
+   
+    }
+    if (a==1 && b==1)
+    {
+    sum=((a*10+b)*30)-(5.5*((c*10)+d));
+    sum=abs(sum);
+    sum=360-sum;
+    
+    }
+    if (a==1 && b==2)
+    {
+       sum=((a*10+b)*30)-(5.5*((c*10)+d));
+     sum=abs(sum);
+     sum=360-sum; 
+     
+    }
+   printf("%d ",sum);
+    
+    
+
+    return 0;
+}
